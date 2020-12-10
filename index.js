@@ -3,9 +3,9 @@ const findMatching = (drivers, name) => {
   return drivers.filter((driverName) => driverName.toLowerCase() === name.toLowerCase());
 }
 
-const fuzzyMatch = (list, partialName) => {
+const fuzzyMatch = (drivers, partialName) => {
   let lengthOfName = partialName.length;
-  return list.filter((driverName) => driverName.slice(0, lengthOfName) === partialName);
+  return drivers.filter((driverName) => driverName.slice(0, lengthOfName) === partialName);
 }
 
 const matchName = (list, name) => {
