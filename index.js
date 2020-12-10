@@ -9,5 +9,5 @@ const fuzzyMatch = (drivers, name) => {
 }
 
 const matchName = (drivers, name) => {
-  return list.filter((driver) => driver.name.toLowerCase() === name.toLowerCase());
+  return drivers.filter((driver) => driver.name.toLowerCase() === name.toLowerCase());
 }
