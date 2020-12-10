@@ -3,13 +3,11 @@ const findMatching = (drivers, name) => {
   return drivers.filter((driverName) => driverName.toLowerCase() === name.toLowerCase());
 }
 
-const fuzzyMatch = (drivers, partialName) => {
-  let lengthOfName = partialName.length;
-  return drivers.filter((driverName) => driverName.slice(0, lengthOfName) === partialName);
+const fuzzyMatch = (drivers, name) => {
+  let lengthOfName = name.length;
+  return drivers.filter((driverName) => driverName.slice(0, lengthOfName) === name)
 }
 
-const matchName = (list, name) => {
-  return list.filter(function (driver) {
-    return driver.name.toLowerCase() === name.toLowerCase();
-  });
+const matchName = (drivers, name) => {
+  return list.filter((driver) => driver.name.toLowerCase() === name.toLowerCase());
 }
